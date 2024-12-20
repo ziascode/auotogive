@@ -18,6 +18,8 @@ body {
 
 .calls{
   margin-top: -200px;
+  padding-left: 7vw;
+  padding-right: 7vw;
 }
 .container {
   display: flex;
