@@ -1,48 +1,29 @@
-// components/DayBackground.tsx
-import { motion } from "framer-motion";
-import Image from 'next/image';
 
 export default function DayBackground() {
   return (
-    <div className="relative h-screen bg-gradient-to-b high from-[#e78a43] to-[#FFED9B] overflow-hidden">
-      {/* Actual Cloud Images Animation */}
-      {[...Array(5)].map((_, i) => (
-        <motion.img
-          key={i}
-          src="./cloudZ.png"  // Assuming you have cloud images in the 'public' folder
-          alt="cloud"
-          className="absolute"
-          style={{
-            width: `${Math.random() *170 + 50}px`, // Adjust cloud size randomly
-            top: `${Math.random() * 80 + 40}%`, // Random vertical position
-            left: `${Math.random() * 100}%`, // Random horizontal position
-          }}
-          animate={{
-            x: [0, 180, -180],
-          }}
-          transition={{
-            repeat: Infinity,
-            duration: 30,
-            ease: "linear",
-            delay:Math.random(),
-          }}
-        />
-      ))}
+    <div className="relative h-screen bg-gradient-to-b from-[#e78a43] to-[#FFED9B] overflow-hidden">
+      {/* Cloud Animations */}
+      {[...Array(5)].map((_, i) => {
+        const randomWidth = Math.random() * 170 + 50; // Random width
+        const randomTop = Math.random() * 80 + 40; // Random vertical position
+        const randomLeft = Math.random() * 100; // Random horizontal position
+        const animationDuration = Math.random() * 10 + 20; // Random animation duration between 20-30s
 
-      {/* <Image
-        src="/mosk1.png" // Path to the image file (public folder or external URL)
-        alt="Example Image"
-        width={390} // Image width in pixels
-        height={180} // Image height in pixels
-        style={{
-            transform: "translateX(30%)",
-            marginLeft: '0px', 
-            marginTop: '95vh'
-          }}
-      /> */}
-
-      
-
+        return (
+          <img
+            key={i}
+            src="./cloudZ.png" // Assuming you have cloud images in the 'public' folder
+            alt="cloud"
+            className="absolute cloud-animation"
+            style={{
+              width: `${randomWidth}px`,
+              top: `${randomTop}%`,
+              left: `${randomLeft}%`,
+              animationDuration: `${animationDuration}s`,
+            }}
+          />
+        );
+      })}
     </div>
   );
 }
