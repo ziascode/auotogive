@@ -1,4 +1,4 @@
-
+"use client";
 import React, { useState } from "react";
 import "../globals.css";
 
@@ -11,13 +11,14 @@ export default function LinkTree() {
   ]);
 
   return (
-    <div className="absolute top-1/3 w-full py-80 flex flex-col items-center z-10 calls pt-14 pb-0">
+    <div className="absolute top-1/3 w-full flex flex-col items-center z-10 calls pt-14 pb-0">
       {/* Header Section */}
       <header className="text-center mb-8">
         <img
           src="./pac-logo-notag-white.svg"
           alt="Penny Appeal"
-          className="w-96 mx-auto mb-4 fade-in-down"
+          className="w-80 mx-auto mb-4 fade-in-down"
+          
         />
         <h1 className="text-2xl font-bold text-white fade-in-text">
           Automate Your Giving
