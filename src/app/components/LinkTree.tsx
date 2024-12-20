@@ -5,7 +5,7 @@ import "../globals.css";
 export default function LinkTree() {
   const [links] = useState([
     { name: "Automate your Friday Sadaqah", url: "https://pennyappeal.automateyourgiving.ca/donate?template=Fridays", icon: "🕌" },
-    { name: "10 Days of Rajab", url: "https://pennyappeal.automateyourgiving.ca/donate?template=Rajab", icon: "☀️" },
+    { name: "Automate 30 Days of Rajab", url: "https://pennyappeal.automateyourgiving.ca/donate?template=Rajab", icon: "☀️" },
     { name: "Sign Up for 10 Nights of Ramadan", url: "https://pennyappeal.ca/10-nights/ ", icon: "🌙" },    
     { name: "Learn More", url: "https://pennyappeal.ca/auto-donation/", icon: "🗒️" },
   ]);
